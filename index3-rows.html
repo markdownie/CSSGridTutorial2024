@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Turorial 3 | Rows</title>
+
+    <style>
+      body {
+        color:#fff;
+        font-family: 'Nunito Semibold';
+        text-align: center;
+      }
+      #content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      #content div{
+        background: #3bbced;
+      }
+      #content div:nth-child(even){
+        background-color: #777;
+      }
+
+      #content {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; /* 25% 25% 50%;*/
+        grid-template-columns: repeat(3, 1fr);
+        
+        /*grid-auto-rows:minmax(200px, auto);*/
+        grid-template-rows: repeat(3, minmax(200px, auto));
+
+        /*grid-column-gap: 50px; /* instead of margin which would put the maring on both sides */
+        /*grid-row-gap: 50px;*/
+        grid-gap:5px; 
+        
+        
+      }
+
+    </style>
+</head>
+<body>
+
+    <div id="content">
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+       <div>Jerky short loin prosciutto pork. Chicken meatball turducken biltong leberkas pork chop. Shank andouille landjaeger tri-tip, tail ground round ham ball tip prosciutto ribeye. Bresaola frankfurter flank ham hock prosciutto, venison andouille jerky leberkas filet mignon pork chop shoulder. Short loin shoulder short ribs tail ribeye frankfurter brisketJerky short loin prosciutto pork. Chicken meatball turducken biltong leberkas pork chop. Shank andouille landjaeger tri-tip, tail ground round ham ball tip prosciutto ribeye. Bresaola frankfurter flank ham hock prosciutto, venison andouille jerky leberkas filet mignon pork chop shoulder. Short loin shoulder short ribs tail ribeye frankfurter brisketJerky short loin prosciutto pork. Chicken meatball turducken biltong leberkas pork chop. Shank andouille landjaeger tri-tip, tail ground round ham ball tip prosciutto ribeye. Bresaola frankfurter flank ham hock prosciutto, venison andouille jerky leberkas filet mignon pork chop shoulder. Short loin shoulder short ribs tail ribeye frankfurter brisket</div>
+       <div>5</div>
+       <div>6</div>
+       <div>7</div>
+       <div>8</div>
+       <div>9</div>    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Turorial 5 | Nested Grids</title>
+
+    <style>
+      body {
+        color:#fff;
+        font-family: 'Nunito Semibold';
+        text-align: center;
+      }
+      #content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      #content div{
+        background: #3bbced;
+        padding:30px;
+      }
+      #content div:nth-child(even){
+        background-color: #777;
+      }
+
+      #content {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; /* 25% 25% 50%;*/
+        grid-template-columns: repeat(3, 1fr);
+        
+        /*grid-auto-rows:minmax(200px, auto);*/
+        /*grid-template-rows: repeat(3, minmax(200px, auto));*/ 
+
+        /*grid-column-gap: 50px; /* instead of margin which would put the maring on both sides */
+        /*grid-row-gap: 50px;*/
+        grid-gap:10px; 
+        
+        
+      }
+
+      .nested {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:20px;
+        grid-column: span 3; /* same as grid-column 1 /4*/
+      }
+
+      .nested p{
+        border: 1px solid #fff;
+        padding:20px;
+        margin:0;
+      }
+
+    </style>
+</head>
+<body>
+
+    <div id="content">
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+       <div class="nested">
+            <p>1</p><p>2</p><p>3</p><p>5</p>
+       </div>
+       <div>5</div>   
+       <div>6</div>  
+    </div>
+    
+</body>
+</html>
